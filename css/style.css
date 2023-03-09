@@ -238,7 +238,69 @@ header ul li ul li a{
     color: #008484;
 }
 
+/* 
+    FOOTER 
+*/
 
+.footer{
+    background: #303030;
+    color: #bdbdbd;
+    position: relative;
+}
+
+.footer .footer-section{
+    padding: 20px 20px 20px 20px;
+}
+
+.footer h4, .footer h3{
+    color: #defaf5;
+    /* padding: 10px; */
+}
+
+.footer h4{
+    padding: 20px;
+}
+
+.footer .links .contacts span {
+    display: block;
+    font-size: 1.1em;
+    margin-bottom:8px;
+}
+
+.footer .links .socials span{
+    display: block;
+    font-size: 1.1em;
+    margin-bottom:8px;
+}
+
+.footer .contact-form .contact-input{
+    margin-bottom: 10px;
+    padding: .9rem, 1.4rem;
+    width: 100%;
+}
+
+.footer .contact-form .contact-input:focus{
+    background: #f6fdfc;
+}
+
+.footer .contacts-form .contact-btn{
+   float: right;
+   font-size: 1.2em;
+   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   color: #ffffff;
+}
+
+.footer .footer-bottom{
+    background: #343a40;
+    text-align: center;
+    position: absolute;
+    color: #686868;
+    height: 50px;
+    width: 100%;
+    padding-top: 20px;
+    left: 0;
+    bottom: 10;
+}
 
 
 
