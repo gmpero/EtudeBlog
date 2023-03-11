@@ -161,13 +161,13 @@ header ul li ul li a{
     margin-bottom: 25px;
 }
 
-.main-content .post-text{
+.main-content .post_text{
     background: #ffffff;
     padding: 8px;
     border-radius: 3px;
 }
 
-.main-content .post-text h3{
+.main-content .post_text h3{
     /* margin: 10px; */
     overflow: hidden;
    text-overflow: ellipsis;
@@ -177,12 +177,12 @@ header ul li ul li a{
    -webkit-box-orient: vertical;
 }
 
-.main-content .post-text h3 a:hover{
+.main-content .post_text h3 a:hover{
     text-decoration: underline;
     color: #5c5b5b;
 }
 
-.main-content .post-text i{
+.main-content .post_text i{
     margin: 5px 10px 10px 0px;
 }
 /* Ограничение текста в блоках о статье */
@@ -302,5 +302,33 @@ header ul li ul li a{
     bottom: 10;
 }
 
+/* 
+    SINGLE HTML
+*/
 
+.single-img img{
+    width: 100%;
+    height: 100%;
+}
+
+.single_post .info{
+    margin: 20px 0;
+}
+
+.single_post .info i{
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.single_post a{
+    text-decoration: underline;
+}
+
+.single_post{
+    margin-bottom: 30px;
+}
+
+.single_post a:hover{
+    color: #008484;
+}
 
