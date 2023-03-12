@@ -332,3 +332,35 @@ header ul li ul li a{
     color: #008484;
 }
 
+
+/* 
+    FORMS
+*/
+
+.reg_form{
+    margin-bottom: 40px;
+    min-height: 50vh;
+}
+
+.reg_form h2{
+    text-align: center;
+    margin: 30px;
+}
+
+.reg_form a{
+    font-size: 1.2em;
+    transition: all .3s;
+    color: #5c5b5b;
+    margin-left: 60px;
+    text-decoration: underline;
+}
+
+.reg_form a:hover{
+    margin-left: 55px;
+    transition: all .3s;
+    text-decoration: none;
+}
+
+.reg_form input{
+    height: 3rem;
+}
