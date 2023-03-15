@@ -17,7 +17,7 @@
                 <div class="text-center">
                     <h2 class="name">404</h2>
                     <p>Ошибка<br>К сожалению запрашиваемая<br> Вами страница не найдена...</p>
-                    <a href="index.php" class="bt-link">Вернуться на главную</a>
+                    <!-- <a href="index.php" class="bt-link">Вернуться на главную</a> -->
                 </div>
             </div>
             <div class="col-6 image-flex">
