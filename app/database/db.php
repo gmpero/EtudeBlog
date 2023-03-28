@@ -108,21 +108,67 @@ function insert($table, $params){
     // INSERT INTO 'users' (admin, usernane, email, password) VALUES ('1', '44', 'Threе@mail.ru', '333');
     $sql = "INSERT INTO $table ($col) VALUES ($mask)";
 
-    test($sql);
-    exit();
+    // test($sql);
+    // exit();
+
+    $query = $pdo->prepare($sql);
+    //$query->execute();  
+    dbCheckEror($query);
+}
+
+
+// $arrData = [
+//     'admin' => '0',
+//     'username' => '12125',
+//     'email' => 'r1112@rfe.ru',
+//     'password' => 'jfkdjfk12kjkjdf',
+//     'created' => '2023-03-15 18:48:14',
+// ];
+
+
+// Редактирование записи (обновление строки в таблице)
+function update($table, $id, $params){
+    global $pdo;
+    $i = 0;
+    $str = '';
+    foreach ($params as $key => $value) {
+        if($i === 0){
+            $str = $str . $key . " = '" . $value . "'";
+        }else{
+            $str = $str . ", " . $key . " = '" . $value . "'";
+        }
+        $i++;
+    }
+    $sql = "UPDATE $table SET $str WHERE id = $id";
+
+    // test($sql);
+    // exit();
 
     $query = $pdo->prepare($sql);
     $query->execute();  
     dbCheckEror($query);
 }
 
+// $param = [
+//     'admin' => '0',
+//     // 'password' => '353',
+//     // 'email' => 'testUpdate@mail.com'
+// ];
 
-$arrData = [
-    'admin' => '0',
-    'username' => '12125',
-    'email' => 'r1112@rfe.ru',
-    'password' => 'jfkdjfk12kjkjdf',
-    'created' => '2023-03-15 18:48:14',
-];
+// update('users', 5, $param);
 
-insert('users', $arrData);
+// Функция удаления записи из БД
+function delete($table, $id){
+    global $pdo;
+    
+    $sql = "DELETE FROM $table WHERE id = $id";
+
+    // test($sql);
+    // exit();
+
+    $query = $pdo->prepare($sql);
+    $query->execute();  
+    dbCheckEror($query);
+}
+
+delete('users', 5);
