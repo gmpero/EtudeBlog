@@ -112,8 +112,10 @@ function insert($table, $params){
     // exit();
 
     $query = $pdo->prepare($sql);
-    //$query->execute();  
+    $query->execute();  
     dbCheckEror($query);
+
+    return $pdo->lastInsertId();
 }
 
 
@@ -171,4 +173,4 @@ function delete($table, $id){
     dbCheckEror($query);
 }
 
-delete('users', 5);
+//delete('users', 5);

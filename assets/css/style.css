@@ -364,3 +364,13 @@ header ul li ul li a{
 .reg_form input{
     height: 3rem;
 }
+
+/* 
+    FORMS -> FORMS ERORS
+*/
+
+form div.error p{
+    color: red;
+    font-style: italic;
+    font-size: 0.8rem;
+}

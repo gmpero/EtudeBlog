@@ -1,4 +1,8 @@
-<?php include("path.php");?>
+<?php   
+    include("path.php");
+    include("app/controllers/users.php");
+?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -22,30 +26,34 @@
 
     <!-- FORM -->
     <div class="container reg_form">
-        <form class="row justify-content-center" method="post" action="reg.html">
+        <form class="row justify-content-center" method="post" action="reg.php">
             <h2>Форма Регистрации</h2>
+            <div class="col-12 col-md-4 mb-3 error">
+                <p><?=$statusMsg?></p>
+            </div>
+            <div class="min-vw-100"></div>
             <div class="form-group col-12 col-md-4 mb-3">
                 <label for="formGroupExampleInput">Логин</label>
-                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Введите Ваш логин">
+                <input name ="login" value="<?=$login?>" type="text" class="form-control" id="formGroupExampleInput" placeholder="Введите Ваш логин">
             </div>
             <div class="min-vw-100"></div>
             <div class="form-group col-12 col-md-4 mb-3">
               <label for="exampleInputEmail1">Email</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+              <input name ="email" value="<?=$email?>" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
             </div>
             <div class="min-vw-100"></div>
             <div class="form-group col-12 col-md-4 mb-3">
               <label for="exampleInputPassword1">Пароль</label>
-              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+              <input name ="pass-first" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
             </div>
             <div class="min-vw-100"></div>
             <div class="form-group col-12 col-md-4 mb-3">
                 <label for="exampleInputPassword2">Повторите пароль</label>
-                <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Repeat Password">
+                <input name="pass-second" type="password" class="form-control" id="exampleInputPassword2" placeholder="Repeat Password">
             </div>
             <div class="min-vw-100"></div>
             <div class="col-6 col-md-4 mb-3">
-                <button type="submit" class="btn btn-secondary">Регистрация</button>
+                <button type="submit" class="btn btn-secondary" name="button-reg">Регистрация</button>
                 <a href="log.html">Авторизация</a>
             </div>
           </form>
