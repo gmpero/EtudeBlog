@@ -1,4 +1,8 @@
-<?php include("path.php");?>
+<?php 
+include("path.php");
+// include("app/database/db.php");
+include("app/controllers/users.php");
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -22,20 +26,24 @@
 
     <!-- FORM -->
     <div class="container reg_form">
-        <form class="row justify-content-center" method="post" action="log.html">
+        <form class="row justify-content-center" method="post" action="">
             <h2>Форма Авторизации</h2>
+            <div class="col-12 col-md-4 mb-3 error">
+                <p><?=$statusMsg?></p>
+            </div>
+            <div class="min-vw-100"></div>
             <div class="form-group col-12 col-md-4 mb-3">
-                <label for="formGroupExampleInput">Логин</label>
-                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Введите Ваш логин">
+                <label for="formGroupExampleInput">Ваша почта</label>
+                <input name ="email" value="<?=$email?>" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
             </div>
             <div class="min-vw-100"></div>
             <div class="form-group col-12 col-md-4 mb-3">
               <label for="exampleInputPassword1">Пароль</label>
-              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+              <input name ="pass" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
             </div>
             <div class="min-vw-100"></div>
             <div class="col-6 col-md-4 mb-3">
-                <button type="submit" class="btn btn-secondary">Войти</button>
+                <button type="submit" class="btn btn-secondary" name="button-log">Войти</button>
                 <a href="reg.html">Регистрация</a>
             </div>
           </form>
