@@ -44,7 +44,7 @@ include("app/database/db.php");
                 </div>
               </div>
               <div class="carousel-item">
-                <img src="assets/images/secondSlaid.jpg" class="d-block w-100" alt="...">
+                <img src="assets/images/original.jpg" class="d-block w-100" alt="...">
                 <div class="carousel-caption carousel-caption-hack d-none d-md-block">
                   <h5><a href="#">Second slide label</a></h5>
                 </div>

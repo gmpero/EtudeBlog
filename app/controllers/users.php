@@ -9,7 +9,7 @@ function userAuth($arr){
     $_SESSION['login'] = $arr['username'];
     $_SESSION['admin'] = $arr['admin'];
     if($_SESSION['admin']){
-        header('location:' . BASE_URL . "admin/admin.php");
+        header('location:' . BASE_URL . "admin/posts/index.php");
     }else{
         header('location:' . BASE_URL);
     }
